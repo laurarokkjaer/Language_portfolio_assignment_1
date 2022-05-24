@@ -18,6 +18,7 @@ Also containing a ```MITLICENSE``` for guidelines of how to reproduce and use th
 
 ## Assignment description
 The official description of the assignment from github/brightspace: [assignment description](https://github.com/CDS-AU-DK/cds-language/blob/main/assignments/assignment1.md).
+
 For this assignment, you will write a small Python program to perform collocational analysis using the string processing and NLP tools you've already encountered. Your script should do the following:
 
 - Take a user-defined search term and a user-defined window size.
