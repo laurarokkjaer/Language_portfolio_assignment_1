@@ -56,5 +56,5 @@ These are the steps you will need to follow in order to get the script running a
 
 
 ## Discussion of results
-The reuslts of this assignment shows a table of valuable information from the chosen text, shuch as the words, it's collocate count, word count and the mutual information scores for all words close to the target keyword = "love". For futher development it would could be useful to have made the script capable of runnign trough a whole corpus of texts and then creating a table with the above informations for each text in that corpus. 
+The reuslts of this assignment shows a table (.csv) of valuable information from the chosen text, shuch as the words, it's collocate count, word count and the mutual information scores for all words close to the target keyword = "love". For futher development it would could be useful to have made the script capable of runnign trough a whole corpus of texts and then creating a table with the above informations for each text in that corpus. 
 
