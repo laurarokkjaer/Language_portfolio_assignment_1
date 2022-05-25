@@ -32,13 +32,13 @@ For this assignment, you will write a small Python program to perform collocatio
 The goal of this assignment was to demonstrate that we have a good understanding of how to use simple text processing techniques to extract valuable information from text data. Essentially we are attemping to replicate the kind of functionality available in the online web interfaces that we saw last week but on a dataset of our choosing.
 
 ### Data source
-The data used in this assignment is the in class flowers-folder from UCloud (shared-drive/CDS-VIS/flowers). 
+The data used in this assignment is the in class flowers-folder from UCloud (shared-drive/CDS-VIS/100_english_novels/corpus). 
 
-Link to flowers dataset: [flowers dataset](https://www.robots.ox.ac.uk/~vgg/data/flowers/17/index.html).
+Link to the 100_english_novels dataset: [english novels](https://github.com/computationalstylistics/100_english_novels).
 
 
 ## Methods
-To solve this assignment i have worked with ```opencv``` in order to both calculate the histograms as well as for the general image processing (using the ```calcHist```, ```imread```, ```normalize``` and ```compareHist```). Futhermore i used the ```jimshow``` and ```jimshow_channel``` from the ```utils```-folder, along with the ```matplotlib``` for plotting and visualisation.
+To solve this assignment i have worked with ```spacy``` for basic ```nlp (natural language processing)``` and ```spacy.load("en_core_web_sm")``` which is a small English pipeline trained on written web. Furthermore, i used ```re```in order to perform ```regex```on the text, as well as ```pandas```and ```os``` for defining filepaths.
 
 ## Usage (reproducing results)
 These are the steps you will need to follow in order to get the script running and working:
@@ -49,14 +49,12 @@ These are the steps you will need to follow in order to get the script running a
 
       - cd src (changing the directory to the src folder in order to run the script)
       
-      - python image_search.py (calling the function within the script)
+      - python collocate_tool.py.py (calling the function within the script)
       
 - when processed, there will be a messagge saying that the script has succeeded and that the outputs can be seen in the output folder 
 
 
 
 ## Discussion of results
-The result of this script is an image which contains one target flower image and the calculated three similar images, as well as the calculated distance scores of the images. Furthermore, a csv file is made with the results (similar images). 
-
-For further development, it could have been interesting to look at how to make the script run with a user defined input. Since this code have already been through a transision from jupiter notebook to .py script, it would not have been much change to do. For the user to parse an argument via the command line when running the code, the script would have been more reproduceble/reuseble, because of the fact that the user wpuld be able to define the target image themselves. 
+The reuslts of this assignment shows a table of valuable information from the chosen text, shuch as the words, it's collocate count, word count and the mutual information scores for all words close to the target keyword = "love". For futher development it would could be useful to have made the script capable of runnign trough a whole corpus of texts and then creating a table with the above informations for each text in that corpus. 
 
