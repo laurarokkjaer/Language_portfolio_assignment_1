@@ -32,7 +32,7 @@ For this assignment, you will write a small Python program to perform collocatio
 The goal of this assignment was to demonstrate that we have a good understanding of how to use simple text processing techniques to extract valuable information from text data. Essentially we are attemping to replicate the kind of functionality available in the online web interfaces that we saw last week but on a dataset of our choosing.
 
 ### Data source
-The data used in this assignment is the in class flowers-folder from UCloud (shared-drive/CDS-VIS/100_english_novels/corpus). 
+The data used in this assignment is the in class folder from UCloud (shared-drive/CDS-VIS/100_english_novels/corpus). 
 
 Link to the 100_english_novels dataset: [english novels](https://github.com/computationalstylistics/100_english_novels).
 
