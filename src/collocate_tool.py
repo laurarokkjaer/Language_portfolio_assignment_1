@@ -5,7 +5,7 @@ nlp = spacy.load("en_core_web_sm")
 
 #Defining filepath and finding file
 import os
-filepath = os.path.join("..", "..", "CDS-LANG", "100_english_novels", "corpus", "Burnett_Princess_1905.txt")
+filepath = os.path.join("input", "Forster_Howards_1910.txt")
 with open(filepath, "r") as file:
     text = file.read()
     
@@ -26,7 +26,7 @@ def tokenize(input_string):
 
 
 def collocate_tool():
-    filename = os.path.join("..", "..", "CDS-LANG", "100_english_novels", "corpus", "Forster_Howards_1910.txt")
+    filename = os.path.join("input", "Forster_Howards_1910.txt")
     with open(filename, "r") as f:
         text = f.read()
     
@@ -114,7 +114,7 @@ def collocate_tool():
     all_elements = list(zip(words, count, occurances, score))
     dframe = pd.DataFrame(all_elements, columns = ["words", "collocate_count", "total_count", "MI"])
     print(dframe)
-    dframe.to_csv("../output/collocate_tool.csv", encoding = "utf-8")
+    dframe.to_csv("output/collocate_tool.csv", encoding = "utf-8")
     
     print("Script suceeded, results can be seen in output-folder")
     
