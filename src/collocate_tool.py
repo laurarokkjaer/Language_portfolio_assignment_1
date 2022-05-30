@@ -79,7 +79,7 @@ def collocate_tool():
         # Append tuple of word and count to list
         collocate_counts.append((word, count))
         
-        
+    # creating function for mutual information score (using the mathematical formula for MI)
     def MI(A, B, AB, span, corpus_size):
         score = math.log((AB * corpus_size) / (A * B * span)) / math.log(2)
         return score
@@ -90,7 +90,7 @@ def collocate_tool():
     corpus_size = len(tokenized_text)
     outfile = "collocates.csv"
 
-
+    # making list for all elements, that needs to be present in table
     out_list = []
     for tup in collocate_counts:
         coll_text = tup[0]
@@ -103,14 +103,14 @@ def collocate_tool():
     count = []
     occurances = []
     score = []
-
+    # seperating the lists in order to make them into a dataframe
     for element in out_list:
         words.append(element[0])
         count.append(element[1])
         occurances.append(element[2])
         score.append(element[3])
     
-    
+    # making the dataframe (output csv)
     all_elements = list(zip(words, count, occurances, score))
     dframe = pd.DataFrame(all_elements, columns = ["words", "collocate_count", "total_count", "MI"])
     print(dframe)
